@@ -11,5 +11,5 @@
 <h3> This project however only runs on console, no frontend was made.
 
 <h2>
-
+ 
 <h4>Material used to generate responses were developed by CDC (Centers for Disease Control and Prevention), more specifically the material were developed by NCEH (National Center for Environmental Health). Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention. Material used for this project is available for no charge.
