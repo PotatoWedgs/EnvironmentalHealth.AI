@@ -1,10 +1,10 @@
 <h1>EnvironmentalHealth.AI
 
-<h4>A project dedicated to help others learn about Environmental Health using Gemini Pro 1.5 - Project submission part of the Google Developers Hackathon
+<h4>A project dedicated to help others learn about Environmental Health
 
 <h2>
 
-<h3>The project uses RAG with a large document of publications made by the NCEH, containing many topics concerning about the environmental health in today's age. A user simply asks a question and the RAG system finds the 10 most relevant chunks that is suited to answer the question by the user, which allows Gemini 1.5 Pro to rely on a source of trustworthy health content to answer questions from users, with the aim to reach nearly with no hallucination within the generated answers. The relevant chunks are put into a prompt structure and given to the model and generates an answer.
+<h3>The project uses RAG with a large document of publications made by the NCEH, containing many topics concerning about the environmental health in today's age. A user simply asks a question and the RAG system finds the 10 most relevant chunks that is suited to answer the question by the user, which allows an LLM to rely on a source of trustworthy health content to answer questions from users, with the aim to reach nearly with no hallucination within the generated answers. The relevant chunks are put into a prompt structure and given to the model and generates an answer.
 
 <h3>The user also has a choice on how they want the model to answer their question, if they want the model to explain "in simple terms" or "in slang", then the model will explain those terms respectively.
 
