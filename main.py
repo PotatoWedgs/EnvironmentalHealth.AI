@@ -194,7 +194,7 @@ class UserQuery:
       "top_k": 15,
     }
 
-    self.model = genai.GenerativeModel(model_name = "gemini-1.5-pro-latest", safety_settings = self.safety_settings, generation_config = self.generation_config)
+    self.model = genai.GenerativeModel(model_name = "", safety_settings = self.safety_settings, generation_config = self.generation_config)
 
 
   async def user_query(self, user_input, explanation_description, relevant_chunk_count):
@@ -214,16 +214,16 @@ class UserQuery:
 
 
     #   Adding to chat messages the user query prompt
-    chat_messages.append({"role": "user", "parts": [professional_persona_prompt_user_query_func(), data_chunks_prompt_user_query_func(total_chunks), user_prompt_func(user_input, explanation_description)]})    #   Appending teacher persona, document, and user query prompts for a structured respone to be generated whilst creating for a better context of the chat to be provided to Gemini Pro
+    chat_messages.append({"role": "user", "parts": [professional_persona_prompt_user_query_func(), data_chunks_prompt_user_query_func(total_chunks), user_prompt_func(user_input, explanation_description)]})    #   Appending teacher persona, document, and user query prompts for a structured respone to be generated whilst creating for a better context of the chat to be provided to the LLM Pro
   
-    response = self.model.generate_content(chat_messages)    #   Passing chat to Gemini Pro for generation
+    response = self.model.generate_content(chat_messages)    #   Passing chat to the LLM for generation
 
     try:
       chat_messages.append({"role": "model", "parts": [response.parts[0].text]})    #   Saving the model's response as reference guide of responding
     
     except IndexError:
       while len(response.parts) == 0:
-        response = self.model.generate_content(chat_messages)    #   Passing chat to Gemini Pro for generation
+        response = self.model.generate_content(chat_messages)    #   Passing chat to the LLM for generation
 
         print("IndexError bypassed")
         
